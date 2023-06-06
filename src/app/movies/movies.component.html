@@ -1,0 +1,26 @@
+<div class="movies-page">
+    <div class="top-bar"></div>
+    <div class="content-body">
+        <div class="movie-grid">
+            <mat-grid-list>
+                *ngFor="let movie of movies"
+                <mat-grid-tile>
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>{{movie.title}}</mat-card-title>
+                            <mat-card-subtitle>{{movie.releasDate}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <img mat-card-image src="{{movie.image}}">
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button>IMDB</button>
+                            <button mat-button>Trailer</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+    <div class="bottom-bar"></div>
+</div>
